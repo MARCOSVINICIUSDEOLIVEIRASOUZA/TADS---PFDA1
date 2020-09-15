@@ -1,0 +1,201 @@
+**SOLUÇÕES**
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+
+
+int main ()
+
+{
+	float raio, altura, volume;
+
+    setlocale(LC_ALL, "Portuguese");
+
+
+    printf("Escreva o valor do raio..:");
+    scanf("%f", &raio);
+
+    printf("Agora escreva o valor da altura..:");
+    scanf("%f", &altura);
+
+    volume = 3.14159 * (raio*raio) * altura;
+
+    printf("O volume da lata de óleo é de %.2f", volume);
+
+}
+---------------------------------------------------------------------------------
+int main ()
+
+{
+	
+    float Altura;
+    char Genero;
+    float Femin;
+    float Mascun;
+
+    printf("Qual é a sua altura?: ");
+    scanf("%f", &Altura);
+ 
+    fflush(stdin);
+ 
+    printf("Qual é o seu sexo? [M/F]: ");
+    scanf("%c", &Genero);
+
+    if(Genero == 'm') {
+        Mascun = (72.7 * Altura) - 58;
+        printf("O seu peso ideal e de %.2f KG", Mascun);
+
+    } else if (Genero == 'f') {
+        Femin = (62.1 * Altura) - 44.7;
+        printf("Seu peso ideal e de %2.f KG", Femin);
+    } else {
+        printf("Opcao Inválida!");
+    }
+	
+	
+}
+------------------------------------------------------------------------------------
+int main ()
+
+{
+	
+  int x;	
+  int y;
+  int res;
+
+    printf("Insira o valor da base..:");
+	scanf("%i", &x);
+
+	printf("\nInsira o valor do expoente..:");
+	scanf("%i", &y);
+
+	res = pow(x,y);
+
+	printf("\nSe elevarmos %i a %i, temos %i", x, y, res);
+	
+	
+} 
+----------------------------------------------------------------------------------------
+int main ()
+
+{
+
+	int num;
+    int dobro;
+    int quad;
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	printf("Insira um número..:");
+	scanf("%i", &num);
+	
+	dobro = num * 2;
+	quad = num * num;
+	
+	printf("O dobro de %i é %i e o quadrado é %i", num, dobro, quad);
+	
+	
+}
+-----------------------------------------------------------------------------------------
+int main ()
+{
+  setlocale(LC_ALL, "portuguese");
+	int anonasc;
+	int anoatual;
+	int ano;
+	int meses;	
+	int semanas;
+	printf("Digite o ano de nascimento..:");
+	scanf("%i", &anonasc);
+	printf("\nDigite o ano atual..:");
+	scanf("%i", &anoatual);
+	ano = anoatual - anonasc;
+	meses = ano * 12;
+	semanas = ano * 48; 
+	printf("\nSua idade é %i, em meses é %i e em semanas é %i", ano, meses, semanas);
+}
+-----------------------------------------------------------------------------------------
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese");
+	float pesoideal;
+	float altura;
+    char genero;
+    float masc;
+    float femin;
+    printf("Digite o genero da pessoa..:");
+    scanf("%c",&genero);
+    printf("\nDigite a altura da pessoa..:");
+    scanf("%f",&altura);
+    if(genero == 'f')
+    {
+        pesoideal = 62.1 * altura - 44.7;
+        printf("O seu peso ideal seria %.2f.", pesoideal);
+    }
+    if(genero == 'm')
+    {
+        pesoideal = 72.7 * altura - 58;
+        printf("O seu peso ideal seria %.2f.", pesoideal);
+    }
+	 }
+	----------------------------------------------------------------------
+  int main ()
+
+{
+ 
+ setlocale(LC_ALL, "Portuguese"); 
+ 
+   char senha[4]; 
+   char senhaCerta[] = "1310";
+   int opcao;
+   int i;
+    
+	 printf ("\n Digite a senha: ");
+    
+	    for(i = 0; i < 4; i++) 
+	    	    
+{
+    senha[i] = getch();
+    putchar('*');
+}	
+
+   if(strcmp(senha, senhaCerta)==0) {
+   	
+   	printf ("\n\n Menu de opção\n\n");
+    printf (" 1 - Ver saldo\n");
+    printf (" 2 - Realizar deposito\n");
+    printf (" 3 - Realizar pagamentos\n"); 
+    printf (" 4 - Realizar transferencias\n"); 
+    printf (" 5 - Sair"); 
+    printf ("\n\n Escolha uma opcao..:");
+    scanf("%i", &opcao);
+
+      switch (opcao)
+	  {
+      	
+      	case 1: printf("\n SALDO");
+      	break;
+        case 2: printf("\n DEPOSITO");
+        break;
+        case 3: printf("\n PAGAMENTOS");
+        break;
+        case 4: printf("\n TRANSFERENCIAS");
+        break;
+		case 5: printf("\n SAIR");
+        break;
+		default: printf("Movimento invalido");
+		break; 
+      	}
+   	
+}
+	     else
+    {
+    printf("\n Senha incorreta.");
+    }
+          
+     
+            
+}
+
+
